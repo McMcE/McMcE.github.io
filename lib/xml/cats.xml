@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+
+    <events>
+    	<event id="screenloaded">
+			<click>
+				<function name="begin">this</function>
+			</click>
+		</event>
+
+		<event id="btnover">
+			<rollover>
+				<css add="btnOver">this</css>
+			</rollover>
+			
+			<rollout>
+				<css remove="btnOver">this</css>
+			</rollout>
+		</event>
+
+		<event id="optionover">
+			<rollover>
+				<css add="optionOver">this</css>
+			</rollover>
+			
+			<rollout>
+				<css remove="optionOver">this</css>
+			</rollout>
+
+			<click>
+				<css add="optionOver">this</css>
+			</click>
+		</event>
+
+		<event id="imgover">
+			<rollover>
+				<css name="imgOver">this</css>
+			</rollover>
+			
+			<rollout>
+				<css name="imgOut">this</css>
+			</rollout>
+
+			<click>
+				<css name="imgOver">this</css>
+			</click>
+		</event>
+
+		<event id="select">
+			<click>
+				<function name="select">this</function>
+			</click>
+		</event>
+
+		<event id="selectandsubmit">
+			<click>
+				<function name="select">this</function>
+				<function name="submit">this</function>
+			</click>
+		</event>
+
+		<event id="submit">
+			<click>
+				<function name="submit">this</function>
+			</click>
+		</event>
+
+		<event id="reset">
+			<click>
+				<function name="reset">this</function>
+			</click>
+		</event>
+
+		<event id="sca">
+			<click>
+				<function name="sca">this</function>
+			</click>
+		</event>
+
+        <event id="loadNextQuestion">
+            <click>
+                <function name="loadNextQuestion">this</function>
+            </click>
+        </event>
+		
+		<event id="restart">
+            <click>
+                <function name="restart">this</function>
+            </click>
+        </event>
+
+        <event id="sendResult">
+            <click>
+                <function name="sendResultJSON" />
+            </click>
+        </event>
+
+        <event id="loadAnotherPage">
+			<click>
+				<url address="http://www.essemble.co.uk" window="true">this</url>
+			</click>
+		</event>
+    </events>    
+
+    <!--timer-->
+    <div id="timerContainer" anim="none" class="timerContainer"/>
+
+    <!--quiz-->
+    <custom type="quiz" id="quiz" width="100%">
+		<settings cheatmode="false" timer="false" radiobutton="true" radiobuttonx="10" radiobuttony="10" correctx="calc(100% - 30px)" correcty="5" attempts="1"/>
+        
+		
+		<!-- question 1 -->
+        <question id="q1" time="30" event="">
+
+    		<image margin-bottom="30" anim="show" animtime="1" src="lib/assets/cats1.jpg"/>
+
+    		<text id="question" margin-bottom="30" anim="none"><![CDATA[<p class="p_24">What does a <i>maneki neko</i> ('beckoning cat') primarily symbolise?</p>]]></text>
+
+			<!--option 1 -->
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Good food</p>]]></text>
+			</option>
+			
+			<!--option 2 -->	
+			<option correct="true">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Good fortune</p>]]></text>
+			</option>
+
+			<!--option 3 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Good films</p>]]></text>
+			</option>
+			
+			<!--option 4 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Good faith</p>]]></text>
+			</option>
+
+			<!-- feedbacks -->
+			<fb id="pass" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Correct!</p><p>A <i>maneki neko</i> is said to bring good luck and fortune to its owner and is often seen in homes and shop windows.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+
+			</fb>
+			
+			<fb id="fail" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Incorrect</p><p>A <i>maneki neko</i> is said to bring good luck and fortune to its owner and is often seen in homes and shop windows.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+			</fb>
+		</question>
+		
+		<!-- question 2 -->
+        <question id="q2" time="30" event="">
+
+    		<image margin-bottom="3" anim="show" animtime="1" src="lib/assets/cats2.jpg"/>
+			`
+    		<text id="credit" margin-bottom="10" anim="none"><![CDATA[<p class="p_8"></p>]]></text>
+ 
+    		<text id="question" margin-bottom="30" anim="none"><![CDATA[<p class="p_24">What is the primary reason for cats being so revered in Kyotango?</p>]]></text>
+
+			<!--option 1 -->
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Their heightened sense of smell helps locate offensive odours</p>]]></text>
+			</option>
+			
+			<!--option 2 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>The large number of cat cafes bring tourists to the area</p>]]></text>
+			</option>
+			
+			<!--option 3 -->
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Eco-friendly cats eat discarded fish</p>]]></text>
+			</option>
+			
+			<!--option 4 -->
+			<option correct="true">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>They protected the local silk industry from damage caused by rodents</p>]]></text>
+			</option>
+			
+			<!-- feedbacks -->
+			<fb id="pass" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Correct!</p><p>It is said cats played an important role in helping to assisting Kyotango's silk industry by keeping mice away from the silkworms. A festival is held every September honouring the felines.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+			</fb>
+			
+			<fb id="fail" event="">
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Incorrect</p><p>It is said cats played an important role in helping to assisting Kyotango's silk industry by keeping mice away from the silkworms. A festival is held every September honouring the felines.</p>]]></text>
+		
+				<button anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+			</fb>
+		</question>
+
+		<!-- question 3 -->
+        <question id="q3" time="30" event="">
+
+    		<image margin-bottom="3" anim="show" animtime="1" src="lib/assets/cats3.png"/>
+			
+    		<text id="credit" margin-bottom="10" anim="none"><![CDATA[<p class="p_8"></p>]]></text>
+
+    		<text id="question" margin-bottom="30" anim="none"><![CDATA[<p class="p_24">Who created this triptych?</p>]]></text>
+
+			<!--option 1 -->
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Tōshūsai Sharaku</p>]]></text>
+			</option>
+			
+			<!--option 2 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Kawanabe Kyōsai</p>]]></text>
+			</option>
+
+			<!--option 3 -->	
+			<option correct="true">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Utagawa Kuniyoshi</p>]]></text>
+			</option>
+			<!--/options -->
+			
+			<!--option 4 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Katsushika Ōi</p>]]></text>
+			</option>
+
+			
+			<!-- feedbacks -->
+			<fb id="pass" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Correct!</p><p>Utagawa Kuniyoshi created this image entitled 'Cats Suggested as The Fifty-three Stations of the Tōkaidō' as a humorous play on words of station names along the ancient route.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+
+			</fb>
+			
+			<fb id="fail" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Incorrect</p><p>Utagawa Kuniyoshi created this image entitled 'Cats Suggested as The Fifty-three Stations of the Tōkaidō' as a humorous play on words of station names along the ancient route.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+			</fb>
+		</question>
+
+		<!-- question 4 -->
+        <question id="q4" time="30" event="">
+
+    		<image margin-bottom="3" anim="show" animtime="1" src="lib/assets/cats4.jpg"/>
+
+    		<text id="question" margin-bottom="30" anim="none"><![CDATA[<p class="p_24">What is notable about the island of Tashirojima?</p>]]></text>
+
+			<!--option 1 -->
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>It has a shrine to cats</p>]]></text>
+			</option>
+			
+			<!--option 2 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>It has more feline inhabitants than human residents</p>]]></text>
+			</option>
+
+			<!--option 3 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>No dogs live there</p>]]></text>
+			</option>
+			<!--/options -->
+			
+			<!--option 4 -->	
+			<option correct="true">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>All of the above</p>]]></text>
+			</option>
+
+			
+			<!-- feedbacks -->
+			<fb id="pass" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Correct!</p><p>The small island in Miyagi Prefecture has a strong connection with cats, who outnumber humans approximately 4 to 1. There is a shrine to cats but of course no dogs live there!</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+
+			</fb>
+			
+			<fb id="fail" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Incorrect</p><p>The small island in Miyagi Prefecture has a strong connection with cats, who outnumber humans approximately 4 to 1. There is a shrine to cats but of course no dogs live there!</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Next question]]></button>
+			</fb>
+		</question>
+
+
+		<!-- question 5 -->
+        <question id="q5" time="30" event="">
+
+    		<image margin-bottom="30" anim="show" animtime="1" src="lib/assets/cats5.png"/>
+
+    		<text id="credit" margin-bottom="10" anim="none"><![CDATA[<p class="p_8"></p>]]></text>
+
+    		<text id="question" margin-bottom="30" anim="none"><![CDATA[<p class="p_24">What is the surname of the main character in Hello Kitty?</p>]]></text>
+
+			<!--option 1 -->
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Pink</p>]]></text>
+			</option>
+			
+			<!--option 2 -->	
+			<option correct="true">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>White</p>]]></text>
+			</option>
+
+			<!--option 3 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Green</p>]]></text>
+			</option>
+			
+			<!--option 4 -->	
+			<option correct="false">
+				<text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p>Black</p>]]></text>
+			</option>
+
+			<!-- feedbacks -->
+			<fb id="pass" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Correct!</p><p>Kitty White first appeared in the mid-1970s and was created by Shimizu Yuko.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Finish]]></button>
+
+			</fb>
+			
+			<fb id="fail" event="">	
+
+				<text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24">Incorrect</p><p>Kitty White first appeared in the mid-1970s and was created by Shimizu Yuko.</p>]]></text>
+		
+				<button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Finish]]></button>
+			</fb>
+		</question>
+
+
+		
+		<!--generic timeout text-->
+		<timeout>
+			<image margin-bottom="30" anim="top" animtime="1" animdelay="0.3" ease="Bounce.easeOut" src="https://www.uk.emb-japan.go.jp/en/quiz/lib/assets/EndImage.jpg"/>
+
+			<text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p class="p_42 grey">Times up!</p>]]></text>
+	
+			<button margin-bottom="30" anim="top" animtime="1" animdelay="0.1" ease="Bounce.easeOut" event="btnover,restart"><![CDATA[Start again]]></button>
+        </timeout>
+
+
+        <!--score screen-->
+        <score masteryscore="80">
+           <pass event="">
+           		<image margin-bottom="30" anim="top" animtime="1" animdelay="0.3" ease="Bounce.easeOut" src="https://www.uk.emb-japan.go.jp/en/quiz/lib/assets/EndImage.jpg"/>
+
+				<text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p class="p_30">CONGRATULATIONS!</p><p class="p_24">You scored [score]%</p>]]></text>
+
+				<text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p>Share your result</p><a href="https://twitter.com/intent/tweet?text=I scored [passed] out of [total] on the Embassy of Japan in the UK's quiz at https://www.uk.emb-japan.go.jp/en/quiz/cats.html" target="_blank"><i style="font-size:32px;color:#6bc5f5;" class="fab fa-twitter-square"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.uk.emb-japan.go.jp%2Fen%2Fquiz%2Fcats.html&amp;src=sdkpreparse"=I scored [passed] out of [total] on the Embassy of Japan's quiz!&display=popup&redirect_uri=https://www.uk.emb-japan.go.jp/en/quiz/cats.html" class="fb-xfbml-parse-ignore" target="_blank"><i style="font-size:32px;color:#415a94;margin-left:10px" class="fab fa-facebook-square"></i></a><a href="mailto:?subject=Shared from the Japanese Quiz&body=I scored [passed] out of [total] on the Embassy of Japan's quiz at https://www.uk.emb-japan.go.jp/en/quiz/cats.html" target="_blank"><i style="font-size:32px;color:#339966;margin-left:10px" class="fas fa-envelope-square"></i></a></p>]]></text>
+				
+				<button margin-bottom="30" anim="top" animtime="1" animdelay="0.1" ease="Bounce.easeOut" event="btnover,restart"><![CDATA[Play again?]]></button>
+            </pass>
+            
+            <fail event="">
+            	<image margin-bottom="30" anim="top" animtime="1" animdelay="0.3" ease="Bounce.easeOut" src="https://www.uk.emb-japan.go.jp/en/quiz/lib/assets/EndImage.jpg"/>
+
+                <text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p class="p_32">You scored [score]%</p><p class="p_24">Why not have another go?</p>]]></text>
+
+				<text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p>Share your result</p><a href="https://twitter.com/intent/tweet?text=I scored [passed] out of [total] on the Embassy of Japan in the UK's quiz at https://www.uk.emb-japan.go.jp/en/quiz/cats.html" target="_blank"><i style="font-size:32px;color:#6bc5f5;" class="fab fa-twitter-square"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.uk.emb-japan.go.jp%2Fen%2Fquiz%cats.html&amp;src=sdkpreparse"=I scored [passed] out of [total] on the Embassy of Japan's quiz!&display=popup&redirect_uri=https://www.uk.emb-japan.go.jp/en/quiz/cats.html" class="fb-xfbml-parse-ignore" target="_blank"><i style="font-size:32px;color:#415a94;margin-left:10px" class="fab fa-facebook-square"></i></a><a href="mailto:?subject=Shared from the Japanese quiz&body=I scored [passed] out of [total] on the Embassy of Japan's quiz at https://www.uk.emb-japan.go.jp/en/quiz/cats.html" target="_blank"><i style="font-size:32px;color:#339966;margin-left:10px" class="fas fa-envelope-square"></i></a></p>]]></text>
+                    
+				<button margin-bottom="30" anim="top" animtime="1" animdelay="0.1" ease="Bounce.easeOut" event="btnover,restart"><![CDATA[Play again?]]></button>
+            </fail>
+        </score>
+    </custom>
+
+    <!--progress bar and footer elements have reserved ids. They are optional elements and can be moved or removed if not required-->
+    <div id="quiz_footer" margin-top="30" height="47" anim="hide" width="100%" text-align="center">
+    	<div id="quiz_progress_outer"><div id="quiz_progress_inner"></div></div>
+    	<text id="footer_score" float="left" margin-top="13" width="33.33%"><![CDATA[<p style="float:left">Score 0/[score]]</p>]]></text>
+    	<text id="footer_page" float="left" margin-top="13" width="33.33%"><![CDATA[<p>Question [current]]/[total]]</p>]]></text>
+    	<text id="footer_next" float="left" margin-top="5" text-align="right" width="33.33%"><![CDATA[]]></text>
+    </div>
+
+
+</data>
+
